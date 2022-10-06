@@ -1,5 +1,5 @@
 /***********************************************************************
-Write a function named `funcTimer(time, func)` that will allow you to hand
+Write a function named `funcTimer(time, func)` that will allow you to pass
 in a function and a number representing milliseconds. The `funcTimer` should use
 the global.setTimeout function to invoke the passed in function in `time` amount
 of seconds.
@@ -18,7 +18,11 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// Your code here
+function funcTimer(time, func) {
+  setTimeout(func, time)
+}
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

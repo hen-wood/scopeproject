@@ -17,7 +17,19 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here
+const sandwichMaker = () => {
+  let order = "One sandwich with tomato"
+
+  return function (topping) {
+    order = order + ` and ${topping}`
+    return order
+  }
+}
+
+let sandwich = sandwichMaker();
+console.log(sandwich('spinach'))
+console.log(sandwich('jelly'))
+console.log(sandwich('bread'))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -9,8 +9,20 @@ Examples:
 arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
+// takes in array
+// initialize a variable as the mirrored array
+// returns a new array "mirrored"
 
-// Your code here
+const arrowMirrorArray = (array) => {
+  let newArray = []
+
+  for (let i = 0; i < array.length; i++) {
+    let el = array[i]
+    newArray.unshift(el)
+  }
+  return [...array, ...newArray] // <-- rest/spread syntax, same as array.concat(newArray)
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

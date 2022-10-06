@@ -27,8 +27,25 @@ Example 4:
   console.log(threeDays()); // prints "Happy New Year!"
 
 ***********************************************************************/
+// take in number (n) as argument the first time it is called
+// if that number is greater than zero, it will return a function
+// the function returned by the countDownTimer can then be invoked (n) times
+// before it returns 'happy new year!'
 
-// Your code here
+function countDownTimer(n) {
+  // if (n === 0) {
+  //   return "Happy New Year!"
+  // }
+
+  if (n > 0) {
+    return function () {
+      n--
+      return countDownTimer()
+    }
+  } else {
+    return "Happy New Year!"
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

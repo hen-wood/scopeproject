@@ -14,7 +14,21 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-// Your code here
+
+// takes in object (person) -- will all ojbects contain 'firstName' and 'lastName' key?
+// capture the first name, capture the last name
+// concat those two
+// return a string containing the full name
+
+// let value = 'another string'    <-------- string template literal syntax
+// console.log(`string ${value}`)
+
+const arrowGetFullName = (obj) => {
+  // console.log(obj)
+  let { firstName, lastName } = obj
+  // console.log(firstName, lastName)
+  return `${firstName} ${lastName}`
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
