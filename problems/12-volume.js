@@ -17,7 +17,7 @@ function recVolume(height) { // height === 10
 
   let measurements = [height]; // measurements === [10 , 5]
 
-  let calc = (num) => {// num === 5 // num ===10
+  let calc = (num) => { // num === 5 // num ===10
     if (measurements.length < 3) {
       measurements.push(num) // measurements === [10, 5] // measurements === [10, 5 , 10]
       if (measurements.length === 3) {

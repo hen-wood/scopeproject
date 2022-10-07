@@ -26,11 +26,6 @@ const sandwichMaker = () => {
   }
 }
 
-let sandwich = sandwichMaker();
-console.log(sandwich('spinach'))
-console.log(sandwich('jelly'))
-console.log(sandwich('bread'))
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

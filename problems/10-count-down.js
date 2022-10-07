@@ -27,35 +27,16 @@ Example 3:
   console.log(threeDays()); // prints "Happy New Year!"
 
 ***********************************************************************/
-// take in number (n) as argument
-// if that number is greater than zero, it will return a function
-// the function returned by the countDownTimer can then be invoked (n) times
-// before it returns 'happy new year!'
-
-// Write a function named: countDownTimer(n). This function will represent a count
-// down of days till the New Year. The countDownTimer function will
-// take in a number argument (n) the first time it is called and if that
-// number is greater than 0 the countDownTimer will return a function.
-
-// The function returned by countDownTimer can then be invoked n times before it
-// returns a string of "Happy New Year!". Look closely at how this function is
-// invoked below:
 function countDownTimer(n) {
-  let test = (input) => {
-    let count = n
-    input = count - 1
-    return input
-  }
-  if (n > 0) {
-    return test
-  } else {
+  if (n === 0) {
     return 'Happy New Year!'
   }
+  const counterFunction = () => {
+    n--
+    return countDownTimer(n)
+  }
+  return counterFunction
 }
-let threeDays = countDownTimer(3); // returns a function
-console.log(threeDays()); // returns a function
-console.log(threeDays()); // returns a function
-console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

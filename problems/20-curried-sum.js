@@ -10,11 +10,11 @@ and returns a function that can be successively called with single arguments
 until it finally returns a sum.
 
 Here is a breakdown of how curriedSum(numArgs) should work:
+- If number is less than or equal to 0 return null
     - Define an empty array, `numbers`.
     - Define a function, `_curriedSum` that:
         - Closes over `numArgs` and `numbers`.
         - Takes a single postive integer greater than 0 as an argument.
-          - If number is less than or equal to 0 return null
         - Appends this to the `numbers` array each time.
         - If `numbers.length === numArgs`, it sums the numbers in the array and
         returns the result.
@@ -42,7 +42,27 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Come up with at least two situations (one per person) on when currying would
   be useful
 ***********************************************************************/
-let curriedSum = () => { }
+const curriedSum = (numArgs) => {
+  if (numArgs <= 0) {
+    return null
+  }
+  let numbers = []
+  const _curriedSum = (num) => {
+    numbers.push(num)
+    if (numbers.length === numArgs) {
+      return numbers.reduce((a, b) => a + b)
+    } else {
+      return _curriedSum
+    }
+  }
+  return _curriedSum
+}
+
+// const zero = curriedSum(0);
+// const negative = curriedSum(-1);
+// assert.equal(zero, null)
+// assert.equal(negative, null)
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

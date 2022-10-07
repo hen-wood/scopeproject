@@ -15,7 +15,12 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// Your code here
+const coupon = (discount) => {
+  const discounter = (prices) => {
+    return prices.map(price => price - (price * discount))
+  }
+  return discounter
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
