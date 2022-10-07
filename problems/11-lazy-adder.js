@@ -22,7 +22,19 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// Your code here
+function lazyAdder(firstNum) {
+  // let sum = firstNum
+  // // console.log('first number ' + sum)
+  // return function (secondNum) {
+  //   // console.log('second number ' + secondNum)
+  //   sum += secondNum
+  //   return function (thirdNum) {
+  //     // console.log('third number ' + thirdNum)
+  //     sum += thirdNum
+  //     return sum
+  //   }
+  // }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

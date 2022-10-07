@@ -42,7 +42,7 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Come up with at least two situations (one per person) on when currying would
   be useful
 ***********************************************************************/
-
+let curriedSum = () => { }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

@@ -22,7 +22,40 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here
+// const smoothieMachine = (...args) => {
+//   // let string = `I'm having a smoothie with ${[...args].join(' and ')}`
+//   // let secondString = ''
+//   let innerFunction = (...args2) => { //['milk']
+//     // stringArray = stringArray.concat(args2)//'milk'
+//     let firstPart = args
+//     let theRest = [...args2]
+//     let firstWord = theRest.shift()
+//     console.log(firstWord, theRest.length)
+//     if (theRest.length === 0) {
+//       secondString += firstWord
+//     } else {
+//       secondString += firstWord + ' and ' + theRest.join(' and ') + ' and '
+//     }
+//     // string += secondString
+//     return string + " and " + secondString
+//   }
+//   return innerFunction
+// }
+const smoothieMachine = (...args) => {
+  let firstPart = [...args].join(' and ')
+  let argArr = []
+  let string = "I'm having a smoothie with"
+
+  const banana = (...args2) => {
+    argArr.push(...args2)
+    if (!firstPart) {
+      return string + ' ' + argArr.join(" and ");
+    } else {
+      return string + ' ' + firstPart + ' and ' + argArr.join(" and ");
+    }
+  }
+  return banana
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
