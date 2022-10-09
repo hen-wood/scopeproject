@@ -24,9 +24,9 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
-const coinCollector = (numCoins) => {
-  let collection = []
-  const coinPusher = (coin) => {
+const coinCollector = (numCoins) => { //3
+  let collection = [] // [25] -- 1 // [25, 5] -- 2 // [25, 5, 10] -- 3
+  const coinPusher = (coin) => { // 25 // 5 // 10
     collection.push(coin)
     if (collection.length === numCoins) {
       return collection
@@ -34,6 +34,7 @@ const coinCollector = (numCoins) => {
   }
   return coinPusher
 }
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
